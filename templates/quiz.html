@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Quiz</title>
+</head>
+<body>
+    <h2>Quiz</h2>
+    <p>{{ pergunta }}</p>
+    <form method="post">
+        {% for alt in alternativas %}
+            <label>
+                <input type="radio" name="resposta" value="{{ alt }}" required> {{ alt }}
+            </label><br>
+        {% endfor %}
+        <input type="hidden" name="correta" value="{{ correta }}">
+        <button type="submit">Responder</button>
+    </form>
+    <p>{{ mensagem }}</p>
+    <a href="/">Voltar</a>
+</body>
+</html>

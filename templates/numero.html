@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+    <h2>Adivinhe o Número (0-100)</h2>
+    <form method="post">
+        <input type="number" name="palpite" min="0" max="100" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <p>{{ mensagem }}</p>
+    <a href="/">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Pedra/Papel/Tesoura</title>
+</head>
+<body>
+    <h2>Pedra / Papel / Tesoura</h2>
+    <form method="post">
+        <select name="escolha" required>
+            <option value="Pedra">Pedra</option>
+            <option value="Papel">Papel</option>
+            <option value="Tesoura">Tesoura</option>
+        </select>
+        <button type="submit">Jogar</button>
+    </form>
+    <p>{{ mensagem }}</p>
+    <a href="/">Voltar</a>
+</body>
+</html>

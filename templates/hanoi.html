@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Torre de Hanoi</title>
+</head>
+<body>
+    <h2>Torre de Hanoi</h2>
+    <p>Escolha o número de discos e veja a solução passo a passo.</p>
+    <form method="post">
+        <label for="discos">Número de discos:</label>
+        <input type="number" name="discos" min="1" max="6" required>
+        <button type="submit">Resolver</button>
+    </form>
+
+    {% if movimentos %}
+        <h3>Movimentos:</h3>
+        <ul>
+            {% for m in movimentos %}
+                <li>{{ m }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <a href="/">Voltar</a>
+</body>
+</html>

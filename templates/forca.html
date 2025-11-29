@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <h2>Jogo da Forca</h2>
+    <p>Palavra: {{ estado }}</p>
+    <form method="post">
+        <label>Digite uma letra:</label>
+        <input type="text" name="letra" maxlength="1" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <p>{{ mensagem }}</p>
+    <a href="/">Voltar</a>
+</body>
+</html>

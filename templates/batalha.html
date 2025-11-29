@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Batalha Naval</title>
+</head>
+<body>
+    <h2>Batalha Naval</h2>
+    <p>Digite as coordenadas (0 a 4) para tentar acertar o navio.</p>
+    <form method="post">
+        <label>X:</label>
+        <input type="number" name="x" min="0" max="4" required>
+        <label>Y:</label>
+        <input type="number" name="y" min="0" max="4" required>
+        <button type="submit">Atacar</button>
+    </form>
+    <p>{{ mensagem }}</p>
+    <a href="/">Voltar</a>
+</body>
+</html>
